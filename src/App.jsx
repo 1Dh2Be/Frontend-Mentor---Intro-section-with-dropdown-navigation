@@ -1,33 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>
+          <nav>
+            <div className='logo'>
+                <img src="src/assets/images/logo.svg" alt="brand logo" />
+            </div>
+            <div className='nav-links'>
+              <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="Careers"></a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+              <div className='auth-links'>
+                <a href="#">Login</a>
+                <a href="#">Register</a>
+              </div>
+            </div>
+          </nav>
+      </header>
+
+      <main>
+          <section className='hero'>
+            <div className='hero__content'>
+                <h1>Make <br/> remote work</h1>
+                <p>
+                  Get your team in sync, no matter your location.
+                  Streamline processes, create team rituals, and
+                  watch productivity soar.
+                </p>
+                <button className='learn__more--btn'>Learn More</button>
+                <div className='partners'>
+                  <img src="src/assets/images/client-databiz.svg" alt="partner logo databiz" />
+                  <img src="src/assets/images/client-audiophile.svg" alt="partner logo audiophile" />
+                  <img src="src/assets/images/client-meet.svg" alt="partner image meet" />
+                  <img src="src/assets/images/client-maker.svg" alt="partner image maker" />
+                </div>
+            </div>
+          </section>
+
+          <section className='hero__img'>
+              <div>
+                <img src="src/assets/images/image-hero-desktop.png" alt="hero image desktop" />
+                <img src="src/assets/images/image-hero-mobile.png" alt="hero image mobile" />
+              </div>
+          </section>
+      </main>
     </>
   )
 }
